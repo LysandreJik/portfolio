@@ -1,0 +1,49 @@
+
+.PersonalProjects__Text{
+    font-family: "Raleway Light Italic";
+    margin: 2%;
+    font-size: 70%;
+}
+
+.PersonalProjects__Text > a{
+    color: #CC5EFF;
+    text-decoration: none;
+}
+
+.PersonalProjects__Grid{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    transition: all 0.5s;
+}
+
+.PersonalProjects__Grid > div{
+    background-color: #7b00b0;
+    position: relative;
+    min-width: 200px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.PersonalProjects__Grid > div:hover{
+    background-color: #CC5EFF;
+    /*border: 10px solid #7b00b0;*/
+}
+
+@media (max-width: 1150px) {
+    .PersonalProjects__Grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .PersonalProjects__Grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
