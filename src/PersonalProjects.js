@@ -1,5 +1,6 @@
 import React from 'react'
 import './theme/PersonalProjects.css'
+
 import Dofus from './images/dofus.png';
 import Combat from './images/combat.png';
 import BotGraphs from './images/bot_graphs.PNG';
@@ -8,6 +9,11 @@ import BotSpecs from './images/bot_specs.PNG';
 import BotSpecs2 from './images/bot_specs_2.PNG';
 import MainMenu from './images/main_menu.gif';
 import BotMap from './images/bot_map.PNG';
+
+import FetchSignal from './images/fetch_signal.gif';
+import Generating from './images/generating.gif';
+import Placing from './images/placing_moving.gif';
+import PlacingOwn from './images/placing_own.gif';
 
 export default class PersonalProjects extends React.Component{
 
@@ -43,24 +49,88 @@ class OpenedProject extends React.Component{
 
     get specbot(){
         return(
-            <div>
-                SpecBot is still under construction.
+            <div className="OpenedProject__Body">
+                <div className="OpenedProject__Text">
+                    "SpecBot" is still under construction.
+                    <br/>
+                    <br/>
+                    SpecBot is a data-visualization website in order to see the evolution of prices in the Dofus video game.
+                    With the evolution of the market prices, the goal is to create algorithms that can predict the evolution
+                    and variation of different items' values.
+                </div>
             </div>
         )
     }
 
     get Gym(){
         return(
-            <div>
-                Gym is still under construction.
+            <div className="OpenedProject__Body">
+                <div className="OpenedProject__Text">
+                    "Gym-like dofus environment" is still under construction.
+                    <br/>
+                    <br/>
+                    This algorithm represents en environment organized in a similar fashion than that of OpenAI's gym.
+                    It is based on a single game, Dofus, and more particularly its combat system. This environment focuses
+                    on replicating the model of the game, so that at any given state, the user can know which actions it
+                    can do.
+                    <br/>
+                    <br/>
+                    The goal of this algorithm is to represent the model of a Reinforcement Learning algorithm, which
+                    would then learn to play and win at Dofus' combat system. I am currently exploring Deep Reinforcement
+                    Learning policies which would best fit an agent, especially off-policy methods (deep Q-learning),
+                    but I am also considering simple methods such as ε-greedy methods.
+                </div>
             </div>
         )
     }
 
     get delay(){
         return(
-            <div>
-                Delay is an desktop app made with Electron, React & Redux, with a NodeJS backend coupled with computation in Python.
+            <div className="OpenedProject__Body">
+                <div className="OpenedProject__Text">
+                    Delay is an desktop app made with Electron, React & Redux, with a NodeJS backend coupled with
+                    computation in Python. The aim of this app is to simulate en environment in which sounds would be
+                    emitted from sources and received by microphones. From the sources' sounds, the app will generate
+                    the signals the microphones would receive.
+                    <br/>
+                    <br/>
+                    The received signals from the microphones can then be used in a dataset. This dataset can be used
+                    for several tasks, this app was created in order to help create a dataset for a Blind Source Separation
+                    algorithm using Deep Neural Networks.
+                    <br/>
+                    <br/>
+                    Feel free to check my <a href="http://github.com/LysandreJik/SourceAdditionDelay">github</a>
+                </div>
+
+                <div className="OpenedProject__Text">
+                    The user has several actions available in order to build his 2-D environment. Firstly, he or she can
+                    dispose the microphones and the selected sources on a canvas, where the distances will be highlighted.
+                </div>
+                <img src={Placing} className="OpenedProject__Signal" />
+                <div className="OpenedProject__Text">
+                    The signals are stored in a "signal bank", which holds the signals and their information. Three basic
+                    signals are available to the user: sine wave, square wave and sawtooth wave. However, the user can
+                    add his or her own signals to the bank, so that they can be used in the simulation later.
+                </div>
+                <img src={FetchSignal} className="OpenedProject__Signal" />
+                <div className="OpenedProject__Text">
+                    The fetched signals can then be added to the environment, deleted and moved around like previously
+                    shown with the template signals. The user can then generate the sounds as they would be perceived by
+                    the microphones. An option is to generate 10 situations in which the microphones and sources would
+                    move around the environment.
+                </div>
+                <div className="OpenedProject__SignalGrid">
+                    <img src={PlacingOwn}/>
+                    <img src={Generating}/>
+                </div>
+                <div className="OpenedProject__Text">
+                    This app currently generates delays according to a temperature of 15°C in dry air, with a speed of
+                    sound of 340 m/s. The sound attenuation due to air is currently a linear function of the distance
+                    between the source and microphone, but will soon be replaced by a more advanced model based on
+                    a Room Impulse Response Generator (<a href="https://www.mathworks.com/matlabcentral/fileexchange/5116-room-impulse-response-generator">MathWorks</a>,
+                    <a href="https://www.researchgate.net/publication/259991276_Room_Impulse_Response_Generator"> RIRG - Emanuël A. P. Habets</a>,
+                    <a href="https://github.com/Marvin182/rir-generator"> Python implementation</a>)
+                </div>
             </div>
         )
     }
@@ -72,9 +142,10 @@ class OpenedProject extends React.Component{
                     DatBot was created with two friends (<a href="http://github.com/Ugdha">Alexis</a> and <a href="https://github.com/BaptisteBdn">Baptiste</a>) and is my largest personal project to date. The goal is to create
                     an artificial life that could seamlessly integrate a video-game world (Dofus).
                     <br/>
+                    <br/>
                     Feel free to check out our <a href="http://github.com/ProjectBlackFalcon">github</a>
                 </div>
-                <img src={Dofus} width={600}/>
+                <img src={Dofus} className="OpenedProject__Image"/>
 
 
                 <div className="OpenedProject__Text">
@@ -88,7 +159,7 @@ class OpenedProject extends React.Component{
                     </ul>
                 </div>
 
-                <img src={Combat} width={600}/>
+                <img src={Combat} className="OpenedProject__Image"/>
 
 
                 <div className="OpenedProject__Text">
@@ -101,12 +172,12 @@ class OpenedProject extends React.Component{
                     visualization (using Web Technologies). A few images of the React Native app are available below.
                 </div>
                 <div className="OpenedProject__ImagesGrid">
-                    <img className="OpenedProject__Image" src={MainMenu}/>
-                    <img className="OpenedProject__Image" src={BotSpecs}/>
-                    <img className="OpenedProject__Image" src={BotSpecs2}/>
-                    <img className="OpenedProject__Image" src={BotGraphs}/>
-                    <img className="OpenedProject__Image" src={BotSchedule}/>
-                    <img className="OpenedProject__Image" src={BotMap}/>
+                    <img src={MainMenu}/>
+                    <img src={BotSpecs}/>
+                    <img src={BotSpecs2}/>
+                    <img src={BotGraphs}/>
+                    <img src={BotSchedule}/>
+                    <img src={BotMap}/>
                 </div>
 
                 <div className="OpenedProject__Text">

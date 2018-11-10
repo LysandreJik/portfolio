@@ -55,6 +55,11 @@
 .OpenedProject__Text > a {
     color: #CC5EFF;
     text-decoration: none;
+    transition: all 0.2s;
+}
+
+.OpenedProject__Text > a:hover{
+    color: #51007A;
 }
 
 .Markov__Quote{
@@ -95,12 +100,34 @@
     height: 12vw;
 }
 
-.OpenedProject__Image{
+.OpenedProject__ImagesGrid > img {
     height: 100%;
+}
+
+.OpenedProject__Image{
+    width: 100%;
+    max-width: 600px;
 }
 
 r{
     color: #CC5EFF;
+}
+
+.OpenedProject__SignalGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5vw;
+    width: 100%;
+}
+
+.OpenedProject__SignalGrid > img{
+    width: 100%;
+    object-fit: fill;
+}
+
+.OpenedProject__Signal{
+    width: 100%;
+    max-width: 600px;
 }
 
 @keyframes fadeIn {
@@ -110,5 +137,11 @@ r{
 
     to{
         opacity: 1
+    }
+}
+
+@media (max-width: 600px) {
+    .PersonalProjects__Grid{
+        grid-template-columns: 1fr;
     }
 }

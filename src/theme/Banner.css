@@ -99,3 +99,16 @@
         transform:  translate(0px,0px)  ;
     }
 }
+
+@media (max-width: 600px) {
+    .Banner{
+        font-size: 80%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .Banner{
+        font-size: 50%;
+    }
+}

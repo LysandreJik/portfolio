@@ -5,6 +5,7 @@ import Interests from "./Interests";
 import SchoolProjects from "./SchoolProjects";
 import WorkExperience from "./WorkExperience";
 import PersonalProjects from "./PersonalProjects";
+import Contact from "./Contact";
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                 <PersonalProjects/>
                 <WorkExperience/>
                 <SchoolProjects/>
+                <Contact/>
             </div>
         );
     }

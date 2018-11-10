@@ -58,6 +58,13 @@ export default class WorkExperience extends React.Component{
 }
 
 class Experience extends React.Component{
+
+    state = {};
+
+    componentDidMount(){
+        window.addEventListener("resize", () => this.setState({update: !this.state.update}));
+    }
+
     render(){
         return(
             <div className='Experience'>
@@ -67,8 +74,9 @@ class Experience extends React.Component{
                         <div className="Experience__Company">{this.props.company}</div>
                         <div className="Experience__TotalDuration">{this.props.totalDuration}</div>
                     </div>
-                    <div className="Experience__Field">[  {this.props.field}  ]</div>
+                    {window.innerWidth > 600 ? <div className="Experience__Field">[  {this.props.field}  ]</div> : ""}
                 </div>
+                {/*{window.innerWidth <= 600 ? <div className="Experience__Field">[  {this.props.field}  ]</div> : ""}*/}
                 <div style={{marginLeft: "20%"}}>
                     {this.props.children}
                 </div>

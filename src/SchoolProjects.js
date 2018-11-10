@@ -33,10 +33,7 @@ export default class SchoolProjects extends React.Component{
                         <div className="Document__Title"><div>Initial parameters choice optimization for plane wave propagation model fitting (EN)</div></div>
                         <img className="Document__Image" src={Initial}/>
                     </div>
-
                 </div>
-
-
             </div>
         );
     }

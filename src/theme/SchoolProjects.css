@@ -10,9 +10,10 @@
     /*border-radius: 20px;*/
     border-bottom: 3px solid #CC5EFF;
     text-align: center;
-    padding: 50px;
+    /*padding: 50px;*/
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .Document__Title{
@@ -26,6 +27,13 @@
     transition: 0.4s all ease;
     color: white;
     padding: 0 10px;
+    font-size: 2vw;
+}
+
+@media (min-width: 1400px) {
+    .Document__Title{
+        font-size: 70%;
+    }
 }
 
 .Document:hover .Document__Title{
