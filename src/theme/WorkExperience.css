@@ -1,7 +1,91 @@
 
-.WorkExperience{
-    position: relative;
-    width: 90%;
-    padding: 5%;
-    border-bottom: 2px solid #CC5EFF;
+
+
+.WorkExperience__Text{
+    font-family: "Raleway Light Italic";
+    margin: 10% 5%;
+    font-size: 90%;
+    text-align: center;
+}
+
+.WorkExperience__Grid{
+    margin: 50px 0;
+}
+
+.Experience{
+    margin-bottom: 8vw;
+}
+
+.Experience hr{
+    margin-top: 5%;
+    width: 50%;
+    border: 0;
+    background-color: #CC5EFF;
+    height: 1px;
+}
+
+.Experience__Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Experience__Info{
+    margin: 0 2vw;
+}
+
+.Experience__Icon{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.Experience__Company{
+    font-family: "Raleway Medium";
+    white-space: nowrap;
+}
+
+.Experience__TotalDuration{
+    font-family: "Raleway Light Italic";
+    font-size: 80%;
+}
+
+.Experience__Field{
+    width: 100%;
+    padding: 2vw;
+    font-family: "Raleway Italic";
+}
+
+.SubExperience__Title{
+    font-family: "Raleway Bold";
+    margin: 2vw 0;
+}
+
+.SubExperience__Duration{
+    font-size: 90%;
+    margin: 1vw 0;
+}
+
+.SubExperience__Location{
+    font-family: "Raleway Italic";
+    font-size: 90%;
+    margin: 1vw 0 3vw 0;
+}
+
+.SubExperience__Description{
+    font-family: Raleway Light;
+    font-size: 80%;
+    line-height: 3.2vw;
+}
+
+@media(max-width: 800px){
+    .SubExperience__Description{
+        line-height: 30px;
+    }
+}
+
+@media(min-width: 1600px){
+    .SubExperience__Description{
+        line-height: 40px;
+    }
 }

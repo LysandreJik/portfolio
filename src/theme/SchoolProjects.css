@@ -1,8 +1,58 @@
 
 .SchoolProjects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    margin-top: 5vw;
+}
+
+.Document{
+    /*border-radius: 20px;*/
+    border-bottom: 3px solid #CC5EFF;
+    text-align: center;
+    padding: 50px;
     position: relative;
-    width: 85%;
-    padding: 5%;
-    margin: 2.5% 0;
-    border-bottom: 2px solid #CC5EFF;
+    overflow: hidden;
+}
+
+.Document__Title{
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 0;
+    left: 0;
+    top: 100%;
+    background-image: linear-gradient(to bottom right, #7700a6, #CC5EFF);
+    opacity: 0;
+    transition: 0.4s all ease;
+    color: white;
+    padding: 0 10px;
+}
+
+.Document:hover .Document__Title{
+    opacity: 1;
+    height: 100%;
+    top: 0;
+}
+
+.Document__Title > div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Document__Image{
+    width: 100%;
+    height: 100%;
+}
+
+.Document:hover .Document__Title{
+    visibility: visible;
+}
+
+hr{
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    height: 1px;
+    background-color: #CC5EFF;
+    width: 50%;
 }

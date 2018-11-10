@@ -1,11 +1,17 @@
 body{
     font-size: 1vw;
+    margin: 0;
 }
 
 @media (max-width: 800px) {
     body{
         font-size: 10px;
     }
+}
+
+h1{
+    font-size: 120%;
+    font-family: Raleway Light;
 }
 
 
@@ -19,10 +25,42 @@ body{
     font-size: 200%;
 }
 
+@media (min-width: 1400px) {
+
+    body{
+        font-size: 0.7vw;
+    }
+
+    .Category{
+        position: relative;
+        left: 20%;
+        width: 50%;
+    }
+}
+
+@media (min-width: 2000px) {
+
+    body{
+        font-size: 0.5vw;
+    }
+
+    .Category{
+        position: relative;
+        left: 20%;
+        width: 50%;
+    }
+}
+
 @font-face {
     font-family: "Raleway Light";
     src: url("./fonts/Raleway-Light.ttf");
 }
+
+@font-face {
+    font-family: "Raleway";
+    src: url("./fonts/Raleway-Regular.ttf");
+}
+
 
 @font-face {
     font-family: "Raleway Light Italic";

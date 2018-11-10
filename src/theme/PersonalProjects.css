@@ -1,8 +1,9 @@
 
 .PersonalProjects__Text{
     font-family: "Raleway Light Italic";
-    margin: 2%;
-    font-size: 70%;
+    margin: 5%;
+    font-size: 90%;
+    text-align: center;
 }
 
 .PersonalProjects__Text > a{
@@ -13,7 +14,7 @@
 .PersonalProjects__Grid{
     margin: 50px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 50px;
     transition: all 0.5s;
@@ -26,7 +27,7 @@
     padding: 20px;
     text-align: center;
     color: white;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     transition: all 0.2s;
     cursor: pointer;
 }
@@ -36,14 +37,78 @@
     /*border: 10px solid #7b00b0;*/
 }
 
-@media (max-width: 1150px) {
-    .PersonalProjects__Grid{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+
+.OpenedProject{
+    animation: fadeIn 0.5s ease;
 }
 
-@media (max-width: 800px) {
-    .PersonalProjects__Grid{
-        grid-template-columns: 1fr 1fr;
+.OpenedProject__Body{
+    font-family: "Raleway Light Italic";
+    text-align: center;
+}
+
+.OpenedProject__Text{
+    font-size: 80%;
+    margin: 10% 0 5% 0;
+}
+
+.OpenedProject__Text > a {
+    color: #CC5EFF;
+    text-decoration: none;
+}
+
+.Markov__Quote{
+    background: #EEE;
+    /*border-left: 10px solid #CC5EFF;*/
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+.Markov__Quote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.Markov__Quote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.OpenedProject__list{
+    text-align: left;
+    line-height: 40px;
+}
+
+.OpenedProject__ImagesGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 12vw;
+}
+
+.OpenedProject__Image{
+    height: 100%;
+}
+
+r{
+    color: #CC5EFF;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1
     }
 }

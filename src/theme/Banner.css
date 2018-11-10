@@ -3,7 +3,7 @@
     background-image: linear-gradient(to bottom right, #51007A, #CC5EFF);
     position: relative;
     width: calc(100% - 100px);
-    height: 25%;
+    height: auto;
     padding: 50px;
 }
 
@@ -29,10 +29,56 @@
     margin-top: 4%;
 }
 
+.Banner__IconGrid{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    transition: all 0.2s;
+}
+
+.Banner__Icon{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    top: 0;
+    transition: all 0.2s ease;
+}
+
+.Banner__Icon:hover{
+    top: -10px;
+}
+
+.Banner__IconText{
+    animation: slide-up-fade-in ease 1s;
+    position: absolute;
+    transition: all 0.2s;
+    text-align: center;
+    top: 90%;
+    white-space: nowrap;
+}
+
+.Banner__IconText > a{
+    color: white;
+    text-decoration: none;
+    font-size: 170%;
+    font-family: "Raleway Italic";
+    transition: all 0.2s;
+}
+
+.Banner__IconText > a:hover{
+    color: #51007A;
+}
+
+.Banner__Icon > img{
+    width: 5vw;
+    height: 5vw;
+    transition: all 0.2s;
+}
+
 @media (min-width: 1300px) {
-    .Banner{
-        height: 400px;
-    }
 
     .Banner__Title{
         font-size: 80px;
@@ -40,5 +86,16 @@
 
     .Banner__Subtitle{
         font-size: 50px;
+    }
+}
+
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        transform:  translate(0px,5px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
     }
 }
