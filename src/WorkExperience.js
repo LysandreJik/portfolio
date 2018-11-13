@@ -77,7 +77,7 @@ class Experience extends React.Component{
                     {window.innerWidth > 600 ? <div className="Experience__Field">[  {this.props.field}  ]</div> : ""}
                 </div>
                 {/*{window.innerWidth <= 600 ? <div className="Experience__Field">[  {this.props.field}  ]</div> : ""}*/}
-                <div style={{marginLeft: "20%"}}>
+                <div style={{marginLeft: "100px"}}>
                     {this.props.children}
                 </div>
                 <hr/>

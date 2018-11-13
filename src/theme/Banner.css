@@ -7,6 +7,33 @@
     padding: 50px;
 }
 
+.Banner__Contact{
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    /*background-color: rgba(204, 94, 255, 0.5);*/
+    /*color: #51007A;*/
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.Banner__Contact > img{
+    height: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    top: 0;
+    position: relative;
+}
+
+.Banner__Contact > img:hover{
+    transform: scale(1.2);
+}
+
 .Banner__Title{
     margin-top: 2%;
     font-family: "Raleway Black";
@@ -58,6 +85,7 @@
     text-align: center;
     top: 90%;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .Banner__IconText > a{

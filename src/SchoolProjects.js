@@ -21,15 +21,15 @@ export default class SchoolProjects extends React.Component{
                 </div>
                 <hr/>
                 <div className="SchoolProjects">
-                    <div className="Document" onClick={() => window.location = "http://lysandredebut.fr/compression.pdf"}>
+                    <div className="Document" onClick={() => window.open("http://lysandredebut.fr/compression.pdf")}>
                         <div className="Document__Title"><div>Compression and decompression of a numerical image (FR)</div></div>
                         <img className="Document__Image" src={Compression}/>
                     </div>
-                    <div className="Document" onClick={() => window.location = "http://lysandredebut.fr/tattoo.pdf"}>
+                    <div className="Document" onClick={() => window.open("http://lysandredebut.fr/tattoo.pdf")}>
                         <div className="Document__Title"><div>Image tattoo using the discrete cosine transform (FR)</div></div>
                         <img className="Document__Image" src={Tattoo}/>
                     </div>
-                    <div className="Document" onClick={() => window.location = "http://lysandredebut.fr/optimization.pdf"}>
+                    <div className="Document" onClick={() => window.open("http://lysandredebut.fr/optimization.pdf")}>
                         <div className="Document__Title"><div>Initial parameters choice optimization for plane wave propagation model fitting (EN)</div></div>
                         <img className="Document__Image" src={Initial}/>
                     </div>

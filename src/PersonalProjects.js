@@ -28,18 +28,18 @@ export default class PersonalProjects extends React.Component{
             <div className="Category">
                 <h1>Personal projects</h1>
                 <div className="PersonalProjects__Text">
-                    I post some of my projects on my <a href="www.github.com/LysandreJik">github</a>, some of which you
+                    I post some of my projects on my <a style={{cursor: "pointer"}} onClick={() => window.open("https://www.github.com/LysandreJik")}>github</a>, some of which you
                     can see demos below.
                 </div>
 
                 <div className="PersonalProjects__Grid">
-                    <div onClick={() => this.setState({openedProject: "delay"})}>Source addition & delay</div>
-                    <div onClick={() => this.setState({openedProject: "datbot"})}>DatBot</div>
-                    <div onClick={() => this.setState({openedProject: "specbot"})}>SpecBot</div>
-                    <div onClick={() => this.setState({openedProject: "dofus"})}>Gym-like Dofus environment</div>
+                    <div style={{cursor: "pointer"}} onClick={() => {window.location.href="#project"; this.setState({openedProject: "delay"})}}>Source addition & delay</div>
+                    <div style={{cursor: "pointer"}} onClick={() => {window.location.href="#project"; this.setState({openedProject: "datbot"})}}>DatBot</div>
+                    <div style={{cursor: "pointer"}} onClick={() => {window.location.href="#project"; this.setState({openedProject: "specbot"})}}>SpecBot</div>
+                    <div style={{cursor: "pointer"}} onClick={() => {window.location.href="#project"; this.setState({openedProject: "dofus"})}}>Gym-like Dofus environment</div>
                 </div>
-
-                {this.state.openedProject ? <OpenedProject openedProject={this.state.openedProject}/> : ""}
+                <a id="project" style={{width: "100%", height: "20px"}}><div>{"\u000a"}</div></a>
+                <OpenedProject openedProject={this.state.openedProject}/>
             </div>
         )
     }
@@ -99,7 +99,7 @@ class OpenedProject extends React.Component{
                     algorithm using Deep Neural Networks.
                     <br/>
                     <br/>
-                    Feel free to check my <a href="http://github.com/LysandreJik/SourceAdditionDelay">github</a>
+                    Feel free to check my <a style={{cursor: "pointer"}} onClick={() => window.open("http://github.com/LysandreJik/SourceAdditionDelay")}>github</a>
                 </div>
 
                 <div className="OpenedProject__Text">
@@ -131,6 +131,9 @@ class OpenedProject extends React.Component{
                     <a href="https://www.researchgate.net/publication/259991276_Room_Impulse_Response_Generator"> RIRG - Emanuël A. P. Habets</a>,
                     <a href="https://github.com/Marvin182/rir-generator"> Python implementation</a>)
                 </div>
+                <div className="OpenedProject__Text">
+                    You can download the file executable <a style={{cursor: "pointer"}} onClick={() => window.open('https://www.lysandredebut.fr/delay.zip')}>here</a> (Windows only). Please be aware that this is an unfinished application with several bugs.
+                </div>
             </div>
         )
     }
@@ -139,11 +142,11 @@ class OpenedProject extends React.Component{
         return(
             <div className="OpenedProject__Body">
                 <div className="OpenedProject__Text">
-                    DatBot was created with two friends (<a href="http://github.com/Ugdha">Alexis</a> and <a href="https://github.com/BaptisteBdn">Baptiste</a>) and is my largest personal project to date. The goal is to create
+                    DatBot was created with two friends (<a style={{cursor: "pointer"}} onClick={() => window.open("http://github.com/Ugdha")}>Alexis</a> and <a style={{cursor: "pointer"}} onClick={() => window.open("https://github.com/BaptisteBdn")}>Baptiste</a>) and is my largest personal project to date. The goal is to create
                     an artificial life that could seamlessly integrate a video-game world (Dofus).
                     <br/>
                     <br/>
-                    Feel free to check out our <a href="http://github.com/ProjectBlackFalcon">github</a>
+                    Feel free to check out our <a style={{cursor: "pointer"}} onClick={() => window.open("http://github.com/ProjectBlackFalcon")}>github</a>
                 </div>
                 <img src={Dofus} className="OpenedProject__Image"/>
 
