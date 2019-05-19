@@ -1,147 +1,145 @@
-
-.PersonalProjects__Text{
-    font-family: "Raleway Light Italic";
-    margin: 5%;
-    font-size: 90%;
-    text-align: center;
+.PersonalProjects__Text {
+	font-family: "Raleway Light Italic";
+	margin: 5%;
+	font-size: 90%;
+	text-align: center;
 }
 
-.PersonalProjects__Text > a{
-    color: #CC5EFF;
-    text-decoration: none;
+.PersonalProjects__Text > a {
+	color: #cc5eff;
+	text-decoration: none;
 }
 
-.PersonalProjects__Grid{
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
-    transition: all 0.5s;
+.PersonalProjects__Grid {
+	margin: 50px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 50px;
+	grid-row-gap: 50px;
+	transition: all 0.5s;
 }
 
-.PersonalProjects__Grid > div{
-    background-color: #7b00b0;
-    position: relative;
-    min-width: 200px;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    /*border-radius: 10px;*/
-    transition: all 0.2s;
-    cursor: pointer;
+.PersonalProjects__Grid > div {
+	background-color: #7b00b0;
+	position: relative;
+	min-width: 200px;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	/*border-radius: 10px;*/
+	transition: all 0.2s;
+	cursor: pointer;
 }
 
-.PersonalProjects__Grid > div:hover{
-    background-color: #CC5EFF;
-    /*border: 10px solid #7b00b0;*/
+.PersonalProjects__Grid > div:hover {
+	background-color: #cc5eff;
+	/*border: 10px solid #7b00b0;*/
 }
 
-
-.OpenedProject{
-    animation: fadeIn 0.5s ease;
+.OpenedProject {
+	animation: fadeIn 0.5s ease;
 }
 
-.OpenedProject__Body{
-    font-family: "Raleway Light Italic";
-    text-align: center;
+.OpenedProject__Body {
+	font-family: "Raleway Light Italic";
+	text-align: center;
 }
 
-.OpenedProject__Text{
-    font-size: 80%;
-    margin: 10% 0 5% 0;
+.OpenedProject__Text {
+	font-size: 80%;
+	margin: 10% 0 5% 0;
 }
 
 .OpenedProject__Text > a {
-    color: #CC5EFF;
-    text-decoration: none;
-    transition: all 0.2s;
+	color: #cc5eff;
+	text-decoration: none;
+	transition: all 0.2s;
 }
 
-.OpenedProject__Text > a:hover{
-    color: #51007A;
+.OpenedProject__Text > a:hover {
+	color: #51007a;
 }
 
-.Markov__Quote{
-    background: #EEE;
-    /*border-left: 10px solid #CC5EFF;*/
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+.Markov__Quote {
+	background: #eee;
+	/*border-left: 10px solid #CC5EFF;*/
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
 }
 
 .Markov__Quote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
 }
 
 .Markov__Quote:after {
-    color: #ccc;
-    content: close-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+	color: #ccc;
+	content: close-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
 }
 
-.OpenedProject__list{
-    text-align: left;
-    line-height: 40px;
+.OpenedProject__list {
+	text-align: left;
+	line-height: 40px;
 }
 
-.OpenedProject__ImagesGrid{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 12vw;
+.OpenedProject__ImagesGrid {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 12vw;
 }
 
 .OpenedProject__ImagesGrid > img {
-    height: 100%;
+	height: 100%;
 }
 
-.OpenedProject__Image{
-    width: 100%;
-    max-width: 600px;
+.OpenedProject__Image {
+	width: 100%;
+	max-width: 600px;
 }
 
-r{
-    color: #CC5EFF;
+span .r {
+	color: #cc5eff;
 }
 
-.OpenedProject__SignalGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5vw;
-    width: 100%;
+.OpenedProject__SignalGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 5vw;
+	width: 100%;
 }
 
-.OpenedProject__SignalGrid > img{
-    width: 100%;
-    object-fit: fill;
+.OpenedProject__SignalGrid > img {
+	width: 100%;
+	object-fit: fill;
 }
 
-.OpenedProject__Signal{
-    width: 100%;
-    max-width: 600px;
+.OpenedProject__Signal {
+	width: 100%;
+	max-width: 600px;
 }
 
 @keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
+	from {
+		opacity: 0;
+	}
 
-    to{
-        opacity: 1
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 600px) {
-    .PersonalProjects__Grid{
-        grid-template-columns: 1fr;
-    }
+	.PersonalProjects__Grid {
+		grid-template-columns: 1fr;
+	}
 }
